@@ -216,3 +216,10 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Regenerable caches (large downloaded/derived data — exceed GitHub file size limits)
+outputs/data/cache/
+scripts/cache/
+
+# macOS
+.DS_Store
