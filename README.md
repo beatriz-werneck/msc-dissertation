@@ -1,7 +1,7 @@
 # msc-dissertation
 This repository contains my Master of Science Dissertation, in the programme Urban Spatial Science at The Bartlett Centre of Spatial Analysis (CASA) in the University College London (UCL).
 
-The title of the dissertation is "The 15-Minute City Paradox in the Global South: individual behaviour and accessibility. The São Paulo study case."
+The title of the dissertation is "The X-Minute City Paradox in São Paulo: local accessibility from everyday travel origins"
 
 Data Wrangling for the São Paulo 2023 Origin Destination Survey:
 
