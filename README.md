@@ -11,7 +11,7 @@ Data Wrangling for the São Paulo 2023 Origin Destination Survey:
 4. Included chaining trips (trips done between two anchors). 
 5. CRS transformation to achieve WGS84 coordinates, not projected ones: microdata contains both projected (co_o_x, co_o_y in EPSG:22523) and WGS84 lat/lon (coord_x_o, coord_y_o). OSMnx and R5 require lat/lon. The script uses the WGS84 columns directly.
 
-Architecture for the X-Minute City Index calculation: 
+Architecture for the Local Accessibility Index calculation: 
 
 1. Loads cleaned São Paulo 2023 Origin Destination Survey data (already filtered to SP municipality, age, anchors + chained trips).
 2. Fetches OSM amenities for São Paulo, classifies them into the 10 categories, following Zhang et al. (2025). 
