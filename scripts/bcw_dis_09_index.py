@@ -405,13 +405,3 @@ if "classe_economica" in result.columns and "fe_via" in result.columns:
 
 print("\n--- 15-min index distributions (walk / active / all) ---")
 print(result[list(VARIANT_15.values())].describe().round(3))
-
-# %% [markdown]
-# Exploration / next steps:
-# - SAMPLE_N gives a fast sanity check; set it to None for the full run (r5py is
-#   the slow step — expect a long run over ~29.5k origins x 3 transit modes).
-# - Expected pattern: index_15 generally higher for wealthier, more central
-#   classes (A/B) than peripheral (D-E); verify the equity table above.
-# - Map result[["lat_o","lon_o","index_15"]] to see the spatial gradient.
-# - EMTU GTFS, once sourced, is picked up automatically (drop it in the emtu_bus
-#   folder); it only adds bus reachability near the municipal edge.
