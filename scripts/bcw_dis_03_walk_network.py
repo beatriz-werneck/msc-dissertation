@@ -66,12 +66,3 @@ fig, ax = ox.plot_graph(
 )
 ax.set_title(f"São Paulo walk network ({len(edges_walk):,} edges)")
 cfg.save_fig("03_walk_network", fig)
-
-# %% [markdown]
-# Exploration notes / suggestions:
-# - `retain_all=True` keeps isolated subgraphs; the index snaps origins to the
-#   nearest node, so a tiny disconnected component could trap an origin. The
-#   largest-component share above tells you how big that risk is.
-# - Edge `length` is in metres (graph is projected internally by OSMnx); the
-#   index converts length -> minutes using walk speed + SRTM grade penalty.
-# - Watch for zero/near-zero length edges (artifacts) — the index filters them.
