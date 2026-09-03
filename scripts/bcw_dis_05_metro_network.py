@@ -95,13 +95,3 @@ ax.set_title(f"São Paulo Metro: {len(metro_lines):,} line features, "
              f"{len(metro_stations):,} stations")
 ax.set_axis_off()
 cfg.save_fig("05_metro_network", fig)
-
-# %% [markdown]
-# Exploration notes / suggestions:
-# - The SPTrans feed includes all 6 Metro services incl. L15-Prata MONORAIL
-#   (route_type 1) with frequency-based schedules — real data, not synthetic.
-# - OSM geometry (railway=subway) is for mapping; routing uses the GTFS subset.
-# - In the index, Metro is reached via r5py mode WALK+SUBWAY and weighted 0.33.
-# - Cross-check station counts: OSM stations vs GTFS stops should be broadly
-#   consistent; large gaps suggest incomplete OSM mapping (geometry only — does
-#   not affect routing, which uses GTFS).
