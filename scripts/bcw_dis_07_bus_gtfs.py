@@ -101,13 +101,3 @@ if "SPTrans" in feeds:
     ax.set_title(f"SPTrans bus stops (n={len(stops):,})")
     ax.set_axis_off()
     cfg.save_fig("07_sptrans_stops", fig)
-
-# %% [markdown]
-# Exploration notes / suggestions:
-# - SPTrans publishes frequencies.txt (headway-based service); r5py/R5 handle
-#   frequency-based GTFS natively, so no timetable expansion is required.
-# - EMTU (metropolitan bus) is listed in the methodology. Source its GTFS into
-#   `outputs/data/cache/documents/gtfs/emtu_bus/`; until then the index uses
-#   SPTrans only and bus accessibility near the municipal edge is underestimated.
-# - If gtfs-kit reports errors (not just warnings), fix them before r5py —
-#   R5 will silently drop malformed trips/stops.
