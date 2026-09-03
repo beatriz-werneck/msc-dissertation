@@ -110,12 +110,3 @@ cfg.save_fig(f"11_category_maps_h3_res{H3_RES}_{THRESHOLD}min", fig)
 out = cfg.OUTPUT_DIR / f"category_scores_h3_res{H3_RES}_{THRESHOLD}min.gpkg"
 gdf.drop(columns="h3").to_file(out, driver="GPKG")
 print(f"saved hex layer: {out}")
-
-# %% [markdown]
-# Notes:
-# - Score scale: 1.0 = reachable by walk/bike (carbon weight 1.0); ~0.13/0.12 =
-#   reachable only by metro/train; ~0.007 = only by bus; 0 = not reachable in 15
-#   min by any mode. So darker (low) cells = a category only reachable by higher-
-#   carbon modes (or not at all).
-# - culture is the sparsest category (lowest mean); transport the densest — useful
-#   context for the saturation discussion.
