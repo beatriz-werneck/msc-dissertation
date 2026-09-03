@@ -108,14 +108,3 @@ for res in H3_RESOLUTIONS:
     out = cfg.OUTPUT_DIR / f"index_h3_res{res}.gpkg"
     gdf.drop(columns="h3").to_file(out, driver="GPKG")
     print(f"  saved hex layer: {out}")
-
-# %% [markdown]
-# Notes / suggestions:
-# - Run bcw_dis_09_index.py with SAMPLE_N = None first; 500 sampled origins are
-#   far too sparse to fill the grid (especially res 10). The map is only
-#   meaningful on the full ~29.5k-origin output.
-# - res 10 gives fine detail but many 1-origin cells (noisy); res 9 is smoother.
-#   Use the printed median origins/cell and MIN_ORIGINS_PER_HEX to judge/clean.
-# - vmin/vmax fixed to [0,1] so the walk/active/all panels are directly
-#   comparable — the walk panel should show the real spatial gradient.
-# - The exported .gpkg layers open directly in QGIS for cartography.
