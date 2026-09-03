@@ -93,13 +93,3 @@ cfg.save_fig(f"12_equity_maps_h3_res{H3_RES}_{INDEX_COL}", fig)
 out = cfg.OUTPUT_DIR / f"equity_{INDEX_COL}_h3_res{H3_RES}.gpkg"
 pd.concat(gpkg_parts, ignore_index=True).drop(columns="h3").to_file(out, driver="GPKG")
 print(f"saved hex layer: {out}")
-
-# %% [markdown]
-# Notes:
-# - Each panel is restricted to hexes where that class has origins, so coverage
-#   differs by class (A is concentrated centrally; D-E is sparser and more
-#   peripheral). The shared 0-1 scale makes the panels directly comparable.
-# - Title mean is the expansion-weighted (fe_via) class mean, matching the equity
-#   table in bcw_dis_09_index.py.
-# - Swap INDEX_COL to "index_walk_15" to map the pedestrian-only index, which
-#   shows the steepest class gradient.
