@@ -65,12 +65,3 @@ fig, ax = ox.plot_graph(
 )
 ax.set_title(f"São Paulo bike network ({len(edges_bike):,} edges)")
 cfg.save_fig("04_bike_network", fig)
-
-# %% [markdown]
-# Exploration notes / suggestions:
-# - The bike network is denser than dedicated cycle infrastructure because OSM's
-#   'bike' filter includes shareable roads; this matches the methodology (cycling
-#   permitted on the road network), but note it does not reflect cycling *comfort*
-#   or safety, only feasibility.
-# - The index uses a SEPARATE pandana network for bike (15 km/h) vs walk (5 km/h)
-#   with a steeper grade penalty — the old code incorrectly reused the walk graph.
