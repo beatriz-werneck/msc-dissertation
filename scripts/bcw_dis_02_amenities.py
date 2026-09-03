@@ -246,13 +246,3 @@ gdf.plot(ax=ax, column="category", markersize=2, legend=True, alpha=0.5, cmap="t
 ax.set_title(f"São Paulo OSM amenities by category (n={len(gdf):,})")
 ax.set_axis_off()
 cfg.save_fig("02_amenities_by_category", fig)
-
-# %% [markdown]
-# Exploration notes / suggestions:
-# - transport is by far the largest category (bus stops dominate); when mapping
-#   the index, consider whether to down-weight or report transport separately.
-# - High unnamed-POI share is normal for OSM (esp. bus stops, ATMs) and does not
-#   affect reachability, which only needs location + category.
-# - Spot-check a dense central zone vs. a peripheral zone for coverage gaps —
-#   OSM completeness can vary across the city and bias the index toward the
-#   better-mapped centre.
