@@ -79,14 +79,3 @@ fig.colorbar(img, ax=ax, shrink=0.7, label="Elevation (m)")
 ax.set_title("São Paulo SRTM elevation (~30 m)")
 ax.set_xlabel("Longitude"); ax.set_ylabel("Latitude")
 cfg.save_fig("08_srtm_elevation", fig)
-
-# %% [markdown]
-# Exploration notes / suggestions:
-# - The DEM is in WGS84 (degrees); OSMnx's add_node_elevations_raster samples it
-#   by lon/lat directly, so no reprojection is needed for the index.
-# - SP relief is moderate but not flat (note the min/max spread) — enough to
-#   matter for walk/bike times, which is exactly why the methodology adjusts for
-#   slope. Steep ridges (e.g. the north/Cantareira fringe) will most affect
-#   peripheral origins.
-# - If NoData share is non-trivial near the city edge, confirm the index's grade
-#   computation treats NoData edges as flat (grade=0) rather than NaN.
