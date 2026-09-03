@@ -21,6 +21,6 @@ Architecture for the Local Accessibility Index calculation:
 6. Runs R5 three times (walk+metro, walk+train, walk+bus) to get door-to-door public-transport times from each origin to the nearest amenity in each category.
 7. Stores 50 raw travel-time columns (tt_walk_culture, tt_metro_healthcare, etc.) — all capped at 45 minutes.
 8. Derives scores for 15, 20, and 30 minutes by checking tt <= threshold, applying the carbon weight, and taking the best weight per category.
-9. Produces 30 category-score columns and 3 final index columns (pmc_index_15, pmc_index_30, pmc_index_45), while keeping every individual row intact.
+9. Produces 30 category-score columns and 3 final index columns (pmc_index_15, pmc_index_20, pmc_index_30), while keeping every individual row intact.
 
    
