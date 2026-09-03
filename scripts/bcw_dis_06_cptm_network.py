@@ -95,13 +95,3 @@ ax.set_title(f"São Paulo CPTM: {len(cptm_lines):,} line features, "
              f"{len(cptm_stations):,} stations")
 ax.set_axis_off()
 cfg.save_fig("06_cptm_network", fig)
-
-# %% [markdown]
-# Exploration notes / suggestions:
-# - OSM railway=rail includes freight/non-CPTM track; the geometry layer is for
-#   mapping only. Routing uses the GTFS subset (route_type 2 = the 7 CPTM lines),
-#   so freight track does not leak into accessibility.
-# - In the index, CPTM is reached via r5py mode WALK+RAIL and weighted 0.30.
-# - L13 (Aeroporto de Guarulhos) leaves the municipality; the both-ends-in-SP
-#   trip filter already constrains demand, but the line is still usable for
-#   intra-SP segments.
